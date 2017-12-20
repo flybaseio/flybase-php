@@ -71,10 +71,10 @@ class Client{
 	}
 	public function limitToFirst( $n ){
 		$this->q['l'] = $n;
-#		$this->q['s'] = array("_id" => 1);
+		$this->q['s'] = array("_id" => 1);
 		return $this;
 	}
-	public function limitToLast ( n ){
+	public function limitToLast ( $n ){
 		$this->q['l'] = n;
 		$this->q['s'] = array("_id" => -1);
 		return $this;
@@ -121,7 +121,7 @@ class Client{
 		$row = json_encode( $row );
 		$ret = $this->request->post($url,$row);
 		$ret = json_decode( $ret,true );
-		$id = $ret['_id']['$oid'];
+		$id = $ret['_id'];
 		return $id;
 	}
 
