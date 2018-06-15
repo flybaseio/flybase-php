@@ -16,7 +16,7 @@ class Request{
 	}
 
 	public function delete($url){
-		return $this->_curl($url,$args,'DELETE');
+		return $this->_curl($url,'DELETE');
 	}
 	
 	public function put($url,$args){
