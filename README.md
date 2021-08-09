@@ -1,4 +1,4 @@
-datamcfly-php
+flybase-php
 =============
 
-PHP class for Data McFly API
+PHP class for Flybase API
